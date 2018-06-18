@@ -1,0 +1,35 @@
+{
+  "name": "pintu1991/omnipay-openedge",
+  "type": "library",
+  "description": "Openedge driver for the Omnipay payment processing library",
+  "keywords": [
+    "openedge",
+    "gateway",
+    "merchant",
+    "omnipay",
+    "pay",
+    "payment",
+    "payments"
+  ],
+  "homepage": "https://github.com/pintu1991/omnipay-openedge",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Prashant Ajani",
+      "email": "prashant.ajani0@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Omnipay\\OpenEdge\\": "src/"
+    }
+  },
+  "require": {
+    "league/omnipay": "^3"
+  },
+  "require-dev": {
+    "omnipay/tests": "^3",
+    "squizlabs/php_codesniffer": "^3",
+    "phpro/grumphp": "^0.14"
+  }
+}
