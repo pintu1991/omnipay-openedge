@@ -20,8 +20,12 @@ class CreateCardRequest extends AbstractRequest
 
             $GatewayRequest->addChild('POSType', 'PC');
             $GatewayRequest->addChild('PinCapabilities', 'FALSE');
+            $GatewayRequest->addChild('CustomerPresent', 'FALSE');
+            $GatewayRequest->addChild('CardPresent', 'FALSE');
             $GatewayRequest->addChild('TrackCapabilities', 'NONE');
-            $GatewayRequest->addChild('TransactionType', 'AliasCreateTransaction');
+            $GatewayRequest->addChild('TransactionType', 'CreditAuthTransaction');
+            $GatewayRequest->addChild('CreateAlias', 'TRUE');
+            $GatewayRequest->addChild('Amount', 0.00);
 
             $GatewayRequest->addChild('AcctNum', $this->getCard()->getNumber());
             $GatewayRequest->addChild('ExpDate', $this->getCard()->getExpiryDate('my'));
