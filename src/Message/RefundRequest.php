@@ -8,9 +8,6 @@ class RefundRequest extends AbstractRequest
     {
         $this->validate('amount', 'transactionReference');
 
-        $transactionReference = simplexml_load_string($this->getTransactionReference());
-        $transactionReceipt = $transactionReference->receipt;
-
         $GatewayRequest = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><GatewayRequest></GatewayRequest>');
         $GatewayRequest->addChild('SpecVersion', $this->getSpecVersion());
         $GatewayRequest->addChild('XWebID', $this->getXWebID());
